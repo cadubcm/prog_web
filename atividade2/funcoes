@@ -1,1 +1,35 @@
+function imprimirOperacao(){
+    let a = 3;
+    let b = 5;
+    console.log(`A operacao entre ${a} e ${b} e ${a+b}`);
+}
 
+function imprimirOperacao2(a,b){
+    console.log(`A operacao entre ${a} e ${b} e ${a+b}`)
+}
+
+imprimirOperacao2(2, 4);
+
+function imprimirOperacao3(a, b, op){
+    let c;
+    switch (op) {
+        case '+':
+            c = a+b;
+            break;
+        case '-':
+            c = a-b;
+            break;
+        case '*':
+            c = a*b;
+            break;
+        case '/':
+            c = a/b;
+            break;
+        default:
+            break;
+    }
+    console.log(`A operacao entre ${a} e ${b} e ${c}`)
+}
+
+imprimirOperacao3(3,4,'*');
+imprimirOperacao3(10,5,'/');
