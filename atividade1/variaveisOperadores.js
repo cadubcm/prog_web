@@ -10,3 +10,4 @@ c = a * b
 console.log(`O resultado da operacao entre ${a} e ${b} é ${c}`)
 c = a / b
 console.log(`O resultado da operacao entre ${a} e ${b} é ${c}`)
+
