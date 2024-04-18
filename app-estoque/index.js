@@ -25,3 +25,16 @@ app.get('/remover/:id', function(req,res){
     estoque.removerProduto(id);
     res.send(id);
 })
+
+app.get('/editar/:id/:qtd', function(req,res){
+    let id = req.params.id;
+    let novaQtd = req.params.qtd
+
+    const produtoExistente = estoque.listarProdutos().find(produto => produto.id === id);
+    if (!produtoExistente) {
+        return res.send('Produto nao encontrado!');
+    }
+
+    estoque.editarProduto(id, novaQtd);
+    res.send('Produto editado')
+})

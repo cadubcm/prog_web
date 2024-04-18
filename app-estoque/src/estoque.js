@@ -23,9 +23,20 @@ function removerProduto(id){
     });
 }
 
+function editarProduto(id, novaQtd){
+    for (let i = 0; i < produtos.length; i++) {
+        if (produtos[i].id === id) {
+            produtos[i].qtd = novaQtd;
+            return true;
+        }
+    }
+    return false;
+}
+
 module.exports = {
     criarProduto,
     adicionarProduto,
     listarProdutos,
-    removerProduto
+    removerProduto,
+    editarProduto
 }
